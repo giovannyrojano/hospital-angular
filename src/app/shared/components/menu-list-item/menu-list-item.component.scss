@@ -1,0 +1,30 @@
+// @import '../../../../theme.scss';
+
+:host {
+    display: block;
+    outline: none;
+  
+    .mat-list-item.active {
+      background-color: #c8cfed;
+    }
+  
+    &:hover,
+    &:focus {
+      >.mat-list-item:not(.expanded) {
+        background-color: #c8cfed !important;
+      }
+    }
+  }
+  
+  .mat-list-item {
+    padding: 2px 0;
+  
+    .routeIcon {
+      margin-right: 40px;
+    }
+  }
+  
+  .mb-table {
+    margin-bottom: 5%;
+  }
+  

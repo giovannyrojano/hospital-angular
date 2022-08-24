@@ -1,0 +1,38 @@
+<div class="container">
+    <h3 mat-dialog-title>Editar Paciente</h3>
+  
+    <form class="mat-dialog-content" [formGroup]="Form">
+  
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput  class="form-control" placeholder="Nombre"  formControlName="name" name="nombre" required >
+          <mat-error *ngIf="Form.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+  
+      <!--Textarea for demo purposes-->
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput  class="form-control" placeholder="Apellido" formControlName="lastname" name="Apellido" maxlength="10" required >
+          <mat-error *ngIf="Form.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+  
+      <!--Contains mat-hint for characters count and has maxLengt set-->  
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput class="form-control" placeholder="DNI" formControlName="dni" name="DNI" maxlength="11" required >
+          <mat-error *ngIf="Form.invalid">{{getErrorMessage()}}</mat-error>
+    
+        </mat-form-field>
+      </div>
+  
+     
+  
+      <div mat-dialog-actions>
+        <button mat-raised-button [disabled]="!Form.valid"  [mat-dialog-close]="1" (click)="confirmEdit()"  color="primary" >Save</button>
+        <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

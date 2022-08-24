@@ -1,0 +1,36 @@
+<div class="container">
+  <h3 mat-dialog-title>Agregar paciente</h3>
+
+  <form class="mat-dialog-content" [formGroup]="Form" >
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control" placeholder="Nombre"  formControlName="name" name="nombre" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <!--Textarea for demo purposes-->
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #lastname class="form-control" placeholder="Apellido" formControlName="lastname" name="Apellido" maxlength="20" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <!--Contains mat-hint for characters count and has maxLengt set-->  
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #dni class="form-control" placeholder="DNI" formControlName="dni" name="DNI" maxlength="11" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+   
+
+    <div mat-dialog-actions>
+      <button mat-raised-button  [disabled]="!Form.valid" type="Submit" [mat-dialog-close]="1" color="primary" (click)="save()" >Guardar </button>
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    </div>
+  </form>
+</div>

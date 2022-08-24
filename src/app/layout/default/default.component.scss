@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-drawer {
+    width: 350px;
+  }
+  
+  mat-drawer-container {
+    height: 100%;
+  }
+  
+  mat-drawer-content {
+    padding: 20px;
+  /*  background-image: url("../../../assets/img/fruit-basket-1114060_1920.jpg");*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 10vh;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto;
+    // filter: blur(2px);
+    // -webkit-filter: blur(2px);
+  }
+  

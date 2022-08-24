@@ -1,0 +1,17 @@
+<div class="container">
+    <h3 mat-dialog-title>¿Esta de acuerdo?</h3>
+    <div mat-dialog-content>
+      DNI: {{data.dni}}
+      <p></p>
+      Nombre: {{data.name}}
+      <p></p>
+      Apellido: {{data.lastname}}
+      <p></p>
+    </div>
+  
+    <div mat-dialog-actions>
+      <button mat-button [mat-dialog-close]="1" (click)="confirmDelete()">Borrar</button>
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    </div>
+  </div>
+  

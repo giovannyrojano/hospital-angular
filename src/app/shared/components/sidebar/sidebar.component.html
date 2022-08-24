@@ -1,0 +1,20 @@
+<mat-nav-list>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+        <mat-card class="profile-card mat-elevation-z8" matRipple>
+            <img src="assets/images/user-icon.png" alt="Image" />
+
+            <mat-card-header class="header-content">
+                <mat-card-subtitle>NOMBRE</mat-card-subtitle>
+                <mat-card-subtitle> EMAIL </mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+    </div>
+
+    <!-- <mat-divider></mat-divider> -->
+
+    <h2 matSubheader>Menú</h2>
+
+    <mat-nav-list>
+        <app-menu-list-item *ngFor="let item of menu" [item]="item"></app-menu-list-item>
+    </mat-nav-list>
+</mat-nav-list>

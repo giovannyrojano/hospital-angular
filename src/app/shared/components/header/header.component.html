@@ -1,0 +1,61 @@
+<mat-toolbar color="primary" class="app-header">
+    <mat-toolbar-row>
+        <button  mat-icon-button (click)="toggleSiderBar()">
+            <mat-icon>notes</mat-icon>
+        </button>
+
+        <span> HOSPITAL</span>
+
+        <ng-template #viewLogout>
+            <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+                <ul fxLayout="row" fxLayoutGap="20px">
+
+                    <li>
+                        <button mat-icon-button>
+                            <mat-icon>settings</mat-icon>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button mat-icon-button>
+                            <mat-icon>help_outline</mat-icon>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button mat-button [matMenuTriggerFor]="menu">
+                            <mat-icon>person_outline</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item (click)="onLogout()">
+                                <mat-icon>exit_to_app</mat-icon>
+                                Cerrar sesión
+                            </button>
+                            <button mat-menu-item routerLinkActive="list-item-active" routerLink="/actor">
+                                <mat-icon>account_box</mat-icon>
+                                Cuenta
+                            </button>
+                        </mat-menu>
+                    </li>
+
+                </ul>
+            </div>
+        </ng-template>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+
+                <li>
+                  
+                </li>
+                <li>
+                    <!--       <a *ngIf="!isLogged" mat-button mat-raised-button routerLink="register"
+                        routerLinkActive="active">Regístrate</a>
+               -->
+                </li>
+
+            </ul>
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
